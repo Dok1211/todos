@@ -51,4 +51,15 @@
 		$data = $stmt->fetch();
 		return $data['todo'];
 	}
+
+	//削除処理:論理削除
+	function deleteDb($id) {
+		$dbh = connectPdo();
+		$nowTime = date("Y-m-d H:i:s");
+		$sql = 'UPDATE todos SET deleted_at = :deleted_at WHERE id = :id';
+		$stmt = $dbh->prepare($sql);
+		$stmt->bindParam(':deleted_at', $nowTime);
+		$stmt->bindValue(':id', $id, PDO::PARAM_INT);
+		$stmt->execute();
+	}
 ?>
