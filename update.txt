@@ -1,0 +1,17 @@
+データの更新
+
+データの処理
+edit.php
+↓
+functions.php
+↓
+connections.php
+↓
+DBS
+
+ページのルーティング処理
+edit.php
+↓
+store.php
+↓
+index.php

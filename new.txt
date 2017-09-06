@@ -1,0 +1,17 @@
+データの新規登録
+
+データの処理
+new.php
+↓
+functions.php
+↓
+connections.php
+↓
+DBS
+
+ページのルーティング処理
+new.php
+↓
+store.php
+↓
+index.php
